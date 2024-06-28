@@ -17,6 +17,8 @@
     <!-- Links to cdns -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script> 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body class="bg-white">
   <div class="navbar bg-base-100">
@@ -185,5 +187,34 @@
           <a class="link link-hover" href="https://www.kcau.ac.ke/enquire-now/">Join KCA University</a>
         </nav>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">
+      <ion-icon name="chevron-up-outline"></ion-icon>
+    </button>
+
+    <script>
+      // Get the button
+      let mybutton = document.getElementById("scrollToTopBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      mybutton.addEventListener("click", function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
+    </script>
 </body>
 </html>
