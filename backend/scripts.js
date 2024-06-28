@@ -1,13 +1,18 @@
-async function loadEvents(){
+async function loadData(){
     // Fetch events data
-    const URL = 'https://script.google.com/macros/s/AKfycbxSD76YBIYYq7-jUolYP4-uE0ZW9oHYzw4hwCzyzsr8fPwZFYc5-Uqmc-Pi1QBdjGzV/exec';
+    const URL = 'https://script.google.com/macros/s/AKfycbz-x0n517tTs9gYhPH__Qbl1HHcH4oNjS9ZNfQrGrrxG0_sR1osGse-xNWc136nc94h/exec';
     const response = await fetch(URL);
 
-    const events = await response.json();
+    const data = await response.json();
+    const events = data.Events;
+    const resources = data.Resources;
 
     const eventsContainer = document.getElementById('events-container');
+    const resourcesContainer = document.getElementById('resources-container');
 
     eventsContainer.innerHTML = '';
+    resourcesContainer.innerHTML = '';
+
     if (events.length == 0){
         eventsContainer.innerHTML += `
             <div class="text-center">
@@ -30,6 +35,22 @@ async function loadEvents(){
             `
         }
     }
+
+    if (resources.length == 0){
+      resourcesContainer.innerHTML += `
+          <div class="text-center">
+              <p>No Resources to show!</p>
+          </div>
+      `
+    }else{
+        for (let resource of resources) {
+            resourcesContainer.innerHTML += `
+              <li>
+                <a href="${resource.URL}" class="text-[#EF5B25] hover:underline">${resource.Name}</a> - ${resource.Description}
+              </li>
+            `
+        }
+    }
 }
 
-loadEvents();
+loadData();
