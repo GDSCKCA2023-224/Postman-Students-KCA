@@ -8,6 +8,9 @@
     <!-- Link to custom css -->
     <link rel="stylesheet" href="../styles.css">
 
+    <!-- Link to custom JS -->
+    <script src="../backend/scripts.js"></script>
+
     <!-- Links to cdns -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script> 
@@ -83,8 +86,10 @@
 
     <section id="events">
         <h1 class="text-3xl text-center text-[#EF5B25]">Events</h1>
-        <div id="events-container" class="min-h-screen flex flex-wrap justify-center gap-8 m-2">
-            <span class="text-black loading loading-bars loading-md"></span>
+        <div class="min-h-screen pt-5 m-2">
+          <div id="events-container" class="flex flex-wrap justify-center gap-8">
+              <span class="text-black loading loading-bars loading-md"></span>
+          </div>
         </div>
     </section>
 
