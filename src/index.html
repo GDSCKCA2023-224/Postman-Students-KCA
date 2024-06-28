@@ -5,14 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Postman Students - KCA University</title>
 
+    <!-- Link to favicon -->
+    <link rel="shortcut icon" href="https://res.cloudinary.com/dglaey3zm/image/upload/v1719575705/media/postman-students-kca/assets/favicon_bwitz4.ico" type="image/x-icon">
+
     <!-- Link to custom css -->
     <link rel="stylesheet" href="../styles.css">
+
+    <!-- Link to custom JS -->
+    <script src="../backend/scripts.js"></script>
 
     <!-- Links to cdns -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script> 
 </head>
 <body class="bg-white">
+  <div class="navbar bg-base-100">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </div>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </div>
+      <a href="#">
+        <img src="https://res.cloudinary.com/dglaey3zm/image/upload/v1719575706/media/postman-students-kca/assets/logo_sbejob.png" alt="logo" class="h-20 w-20">
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSeoztNcIQelFW-ShD0gQs_5JBPqElmu2kIqbQ0J1vcPdizq2g/viewform" 
+      class="btn bg-[#EF5B25] text-white">Join Us</a>
+    </div>
+  </div>
+
     <section id="hero">
         <div class="hero bg-base-200 min-h-screen">
             <div class="hero-content text-center text-white">
@@ -22,7 +73,9 @@
                     Join our Postman student program and gain the skills that will set you apart. Free training, certifications,
                     and an exclusive badge await -  fuel your developer future, today!
                 </p>
-                <button class="btn bg-[#EF5B25] text-white">Join the Postman Student Club!</button>
+                <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeoztNcIQelFW-ShD0gQs_5JBPqElmu2kIqbQ0J1vcPdizq2g/viewform" 
+                class="btn bg-[#EF5B25] text-white">Join the Postman Student Club!</a>
               </div>
             </div>
         </div>
@@ -83,8 +136,10 @@
 
     <section id="events">
         <h1 class="text-3xl text-center text-[#EF5B25]">Events</h1>
-        <div id="events-container" class="min-h-screen flex flex-wrap justify-center gap-8 m-2">
-            <span class="text-black loading loading-bars loading-md"></span>
+        <div class="min-h-screen pt-5 m-2">
+          <div id="events-container" class="flex flex-wrap justify-center gap-8">
+              <span class="text-black loading loading-bars loading-md"></span>
+          </div>
         </div>
     </section>
 
@@ -92,42 +147,19 @@
       <div class="r">
         <div class="text-center text-white bg-[#EF5B25] p-10 mt-5">
           <img src="https://res.cloudinary.com/dglaey3zm/image/upload/v1719564876/media/postman-students-kca/assets/postman-students_n3usdo.png" alt="" class="mx-auto">
-          <button class="btn btn-outline text-white mt-5">Join our Postman Student Club!</button>
+          <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeoztNcIQelFW-ShD0gQs_5JBPqElmu2kIqbQ0J1vcPdizq2g/viewform" 
+          class="btn btn-outline text-white mt-5">Join our Postman Student Club!</a>
         </div>
       </div>
     </section>
     
     <section id="resources">
-        <div class="min-h-screen pt-5 m-2">
-            <h1 class="text-3xl text-center text-[#EF5B25] pt-5">Resources</h1>
-            <div class="pt-5 mx-auto px-4 py-4">
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <li>
-                    <a href="#">
-                      <div class="flex flex-col bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src="https://cdn.iconscout.com/icon/free/png-256/jira-282222.png" class="w-full h-32 object-cover" alt="JIRA Thumbnail">
-                        <div class="px-4 py-2 flex flex-col items-start justify-between">
-                          <strong class="text-base font-bold">JIRA - Development Taskboard</strong>
-                          <span class="text-gray-600 text-xs">This is a Kanban style taskboard used to track the progress of development tasks.</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://projects.invisionapp.com/d/main#/projects">
-                      <div class="flex flex-col bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src="https://www.invisionapp.com/assets/img/invision-logo-square.png" class="w-full h-32 object-cover" alt="InvisionApp Thumbnail">
-                        <div class="px-4 py-2 flex flex-col items-start justify-between">
-                          <strong class="text-base font-bold">InvisionApp - Design Board</strong>
-                          <span class="text-gray-600 text-xs">InvisionApp is a prototyping and design brainstorming tool for apps and user interfaces.</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              
-        </div>
+      <div class="min-h-screen mx-auto px-4 py-8">
+        <h1 class="text-3xl text-center text-[#EF5B25] mb-4">Resources</h1>
+        <ul class="list-disc grid grid-cols-1 md:grid-cols-2 gap-4 text-black m-5" id="resources-container">
+        </ul>
+      </div>
     </section>
 
     <footer class="footer bg-base-200 text-white p-10">
@@ -138,6 +170,13 @@
           <a class="link link-hover" href="https://www.postman.com/student-program/educator/">Postman Classroom</a>
           <a class="link link-hover" href="https://discord.com/invite/bKjz3CXbB6">Join Student Community on Discord</a>
           <a class="link link-hover" href="https://www.postman.com/student-program/">Learn More</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Google Developer Student Clubs - KCA</h6>
+          <a class="link link-hover" href="https://gdsc.community.dev/">About GDSC</a>
+          <a class="link link-hover" href="https://gdsc.community.dev/kca-university-nairobi-kenya/">Join the Community</a>
+          <a class="link link-hover" href="https://discord.gg/EzA66Y3S">Join on Discord</a>
+          <a class="link link-hover" href="https://www.twitter.com/dsc_kca">Follow on X</a>
         </nav>
         <nav>
           <h6 class="footer-title">KCA University</h6>
@@ -156,7 +195,7 @@
                 type="text"
                 placeholder="username@site.com"
                 class="input input-bordered join-item" />
-              <button class="btn bg-[#EF5B25] join-item text-white">Subscribe</button>
+              <button class="btn btn-disabled bg-[#EF5B25] join-item text-white">Subscribe</button>
             </div>
           </fieldset>
         </form>
