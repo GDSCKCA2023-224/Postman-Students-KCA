@@ -1,7 +1,9 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-size:larger;
 }
 
 .about {
@@ -88,6 +90,222 @@ body {
 #scrollToTopBtn ion-icon {
   font-size: 24px;
 }
+         
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #fceabb 0%, #f8b500  51%, #fceabb  100%);
+  margin: 20px;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;            
+  border-radius: 10px;
+  display: inline-block;
+  font-size: medium;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: black;
+  text-decoration: none;
+  box-shadow: 0 0 10px #eee;
+}
+
+.et-hero-tabs,
+.et-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #eee;
+    text-align: center;
+    padding: 0 2em;
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+        letter-spacing: 1rem;
+    }
+    h3 {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+        opacity: 0.6;
+    }
+}
+
+.et-hero-tabs-container {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 10;
+}
+
+.et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 0.8rem;
+    &:hover {
+      color:white;
+      background: rgba(102,177,241,0.8);
+      transition: all 0.5s ease;
+    }
+}
+
+.et-hero-tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    background: #66B1F1;
+    transition: left 0.3s ease;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin-right: 10px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: flex;
+  height: 100vh; /* Set height to 100vh */
+  width: 100vw;
+  border: 2px solid;
+  overflow: hidden;
+}
+
+.mySlides img {
+  width: 100%;           
+  height: 100%;        
+  object-fit: cover;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.mySlides::before {
+  content: '';               /* Ensure content is present for pseudo-element */
+  position: absolute;        /* Position overlay */
+  bottom: 0;                 /* Align to bottom of container */
+  left: 0;                   /* Align to left edge of container */
+  width: 100%;               /* Full width */
+  height: 20%;               /* Half of the container's height */
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)); /* Black gradient */
+  transition: height 0.3s ease; /* Smooth transition for height change */
+  pointer-events: none;       /* Allow clicks to go through overlay */
+}
+
+.mySlides:hover::before {
+  height: 100%;              /* Expand gradient to cover half of the image on hover */
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -50%;   /* Initially position text below the container */
+  width: 100%;
+  text-align: center;
+  transition: bottom 0.3s ease; /* Smooth transition for position change */
+}
+
+.mySlides:hover .text {
+  bottom: 50%;    /* Move text to the middle on hover */
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+@media (min-width: 800px) {
+  .et-hero-tabs,
+  .et-slide {
+    h1 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+  }
+  .et-hero-tab {
+    font-size: 1rem;
+  }
+}
 
 /* media */
 @media (max-width: 1200px) {
@@ -115,3 +333,4 @@ body {
     width: 100%;
   }
 }
+
